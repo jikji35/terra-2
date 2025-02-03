@@ -1,0 +1,38 @@
+
+
+/* 폰트어썸 구버전(Ver.4/Ver.5) */
+/*  https://fontawesome.com/v4/icons/  */
+/*  https://fontawesome.com/v5/icons/docker?s=&f=brands  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body{
+    margin: 0; /* 위로 딱달라붙게 마진값을 없애준다. */
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6em;
+    font-size: 18px;
+    
+}
+
+
+.map-frame {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.map-content {
+    width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+

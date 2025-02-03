@@ -1,0 +1,5 @@
+
+https://app.netlify.com/sites/jikji35/deploys 사이트에서
+
+deploys메뉴에서 "browse to upload"를 클릭해서
+netlify 폴더를 통째로 업로드하면된다.
