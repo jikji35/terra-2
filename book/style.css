@@ -264,7 +264,11 @@ ul.dropdown-menu dropdown-menu-dark{
 }
 
 
-
+/* 입출금내역서 */
+#gagebu {
+  text-decoration: none;
+  color: rgb(202, 247, 233);
+}
 
 
 /* Dropdown 메뉴 */
