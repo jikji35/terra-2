@@ -74,3 +74,17 @@ function doGet() {
 
 
 
+구글스프레드시트 홈으로 들어가면 해당 gagebu파일에서
+(메뉴) 파일-공유-웹에게시 에 들어가면 공유 링크주소가
+나온다.  이 주소를 웹 해당페이지에 삽입하면 동기화된다.
+만약에 파일이 바뀐다면 주소가 다르므로 다시 
+(메뉴) 파일-공유-웹에게시 에 들어가서 링크주소를
+받아야한다.
+
+
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRq6Va2fieifiraeEzkm1BcX2hYKQF3THv0UiUA3sKqOOVAnG_rWFl2FIhG81S2nWyqQY1etu0G0kxA/pubhtml
+
+
+▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦
+▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦▣▦
+
