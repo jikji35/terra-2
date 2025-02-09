@@ -201,6 +201,15 @@ ul.dropdown-menu dropdown-menu-dark {
 #gagebu {
   text-decoration: none;
   color: rgb(202, 247, 233);
+  font-size: 1.3em;
+}
+
+
+/* 회원 납입금현황 */
+#gagebu_1 {
+  text-decoration: none;
+  color: rgb(202, 247, 233);
+  font-size: 0.9em;
 }
 
 /* Dropdown 메뉴 */
