@@ -7,6 +7,45 @@ body{
     height: 100vh;
 	margin: auto;     
 	padding: 3px 0px 3px 0px; /* 상단화면과 시계사이 간격 */}
+
+
+
+
+
+
+
+/* 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) */
+/* 이 코드를 사용하기위해 index.html,style.css와 jikji.js파일과 연결되어있다. */
+/* 전체 화면을 덮는 로딩 화면 스타일 */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #363434;  /* 배경색을 회색으로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+#loading-screen img {
+  width: 250px; /* 첫화면 로고 크기 */
+}
+
+/* 메인 컨텐츠(로고전 원래의 홈페이지) 숨기기 */
+#main-content {
+  display: none;
+}
+/* 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(끝지점 !!) */
+
+
+
+
+
+
+
+
 	
  /* margin: 0 auto; 테이블 가운데정렬 */	
 table{border-spacing:0px;border-style:none;padding:0px; margin: 0 auto;}

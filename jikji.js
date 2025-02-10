@@ -132,3 +132,37 @@ function Clock() {
                              
                         
              
+
+
+
+
+
+
+
+    // 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용
+    // 이 코드를 사용하기위해 index.html,style.css와 jikji.js파일과 연결되어있다.
+    // 1.5초 후에 로딩 화면을 숨기고 메인 콘텐츠를 보이게 함
+      setTimeout(() => {
+          document.getElementById('loading-screen').style.opacity = '0';
+
+          // CSS transition 효과를 위한 딜레이 (0.5초 후 display: none 적용)
+          setTimeout(() => {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.getElementById('main-content').style.display = 'block';
+          }, 500);
+      }, 1500); // 1.5초 동안 로딩 화면
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

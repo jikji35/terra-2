@@ -25,13 +25,54 @@
     <link rel="stylesheet" href="style.css" />
     
     
-    
-     <link
-      rel="apple-touch-icon"
-      sizes="32x32"
-      href="image/apple-icon-32x32.png"
+      
+    <!-- 파비콘 아이콘들 -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="image/android-icon-36x36.png"
     />
-     <link
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="image/android-icon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="72x72"
+      href="image/android-icon-72x72.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="image/android-icon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="image/android-icon-144x144.png"
+    />
+    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="image/android-icon-192x192.png"
+    />
+    
+    <link rel="icon" href="/favicon.ico?" />
+    
+    
+    
+    
+    <!-- 애플 터치 아이콘 -->
+
+    <link
       rel="apple-touch-icon"
       sizes="57x57"
       href="image/apple-icon-57x57.png"
@@ -77,58 +118,15 @@
       href="image/apple-icon-180x180.png"
     />
     
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="36x36"
-      href="image/android-icon-36x36.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="image/android-icon-48x48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="72x72"
-      href="image/android-icon-72x72.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="image/android-icon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="144x144"
-      href="image/android-icon-144x144.png"
-    />
-    
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="image/android-icon-192x192.png"
-    />
-    
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="image/android-icon-512x512.png"
-    />
-    
-    <link rel="icon" href="image/favicon.ico?" />
-    
-    
+    <!-- 웹사이트 매니페스트 -->
     <link rel="manifest" href="/manifest.json" />
     
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <!-- Ms브라우저 설정 파일 -->
+    <link rel="browserconfig" href="/browserconfig.xml">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     
 
     <!-- 마우스 우클릭 방지/드래그 방지하는 스크립트를 head안에 삽입! -->
@@ -146,6 +144,32 @@
     ondragstart="return false"
     onkeydown="return false"
   >
+   
+   
+   
+   
+   
+   
+    <!-- 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) -->
+    <!-- 이 코드를 사용하기위해 style.css와 jikji.js파일과 연결되어있다. -->
+    <!-- 초기화면 로고 이미지는 image폴더내에 jikji35-1.png,jikji35-2,jikji35-3 총3개가 들어있다.  -->
+     
+    <!-- 초기화면 로딩 화면 띄우기(2초) --> 
+    <div id="loading-screen"> 
+      <img src="image/jikji35-1.png" alt="직지황악회"> 
+    </div>  
+   
+    <!-- 메인 콘텐츠 -->
+      <div id="main-content">
+    <!-- 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(끝지점) -->
+   
+   
+   
+   
+   
+   
+   
+   
     <table>
       <tbody>
         <tr>
