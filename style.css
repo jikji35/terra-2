@@ -89,15 +89,49 @@ table > tbody > tr:nth-of-type(2){
     
 }
 
-.wrap2 {   /* marquan LED창 */
-	color: aliceblue;
-	width: 450px; /* LED 글자창 너비 */
-	height: 20px;
-    line-height: 20px;
-	padding: 0 66px; /* LED창 길이변 */
-	background-image: url("image/bg.gif");
-	border-radius: 10px 10px 5px 5px;
-}
+
+
+/* 테스트 */
+
+/* 전광판 구역~ 직지초35회 김천지부 동기연락망 옆으로 흐르는 애니메이션 구현 */
+
+.marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            align-items: center; /* 수직 중앙 정렬 */
+            background-image: url("image/bg.gif"); /* 전광판 배경이미지 */
+            background-color: lightgray;
+        }
+
+        .marquee {
+            display: inline-block;
+            align-items: center; /* 내부 요소 수직 중앙 정렬 */
+            white-space: nowrap;
+            animation: marquee 15s linear infinite; /* 시간설정 */
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+
+
+
+
+
+/* 전광판 좌측구역~ 아이콘 4개 앞뒤로 회전하는 애니메이션 구현 */
+
 .cube{
     width: 1.43rem; /* 23px */
     height: 1.43rem;

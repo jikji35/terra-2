@@ -150,18 +150,18 @@
    
    
    
-    <!-- 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) -->
+    <!-- 초기화면 광고 로고 띄우고 1초후에 메인 페이지를 열리게 하려고 사용(시작지점) -->
     <!-- 이 코드를 사용하기위해 style.css와 jikji.js파일과 연결되어있다. -->
     <!-- 초기화면 로고 이미지는 image폴더내에 jikji35-1.png,jikji35-2,jikji35-3 총3개가 들어있다.  -->
      
-    <!-- 초기화면 로딩 화면 띄우기(2초) --> 
+    <!-- 초기화면 로딩 화면 띄우기(1초) --> 
     <div id="loading-screen"> 
       <img src="image/jikji35-1.png" alt="직지황악회"> 
     </div>  
    
     <!-- 메인 콘텐츠 -->
       <div id="main-content">
-    <!-- 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(끝지점) -->
+    <!-- 초기화면 광고 로고 띄우고 1초후에 메인 페이지를 열리게 하려고 사용(끝지점) -->
    
    
    
@@ -192,9 +192,9 @@
             </div>
           </td>
 
-          <td class="wrap2" colspan="5">
-            <marquee scrollamount="5"
-              >&nbsp;
+          <td colspan="5">
+            <div class="marquee-container">
+              <div class="marquee">
              
               <img
                 src="image/aa.gif"
@@ -225,7 +225,8 @@
                 height="25px"
                 border="0"
                 alt="image"
-            /></marquee>
+              /></div>
+            </div>
           </td>
         </tr>
 
@@ -566,6 +567,7 @@
           </td>
         </tr>
         
+        <tr>
           <td class="no_1">20</td>
           <td class="name_1">
             <a href="tel:010-6623-5695"><span>최영애</span></a>
@@ -609,7 +611,7 @@
               <img src="image/anicircle03_green.gif" />&nbsp;&nbsp;<span
                 class="jik"
                 ><a href="book/index.html" target="_blank"
-                  >https://jeon2457.github.io/jikji35/</a
+                  >https://jikji35.github.io/terra-1/</a
                 ></span
               >&nbsp;
               <img src="image/anicircle03_green.gif" />
