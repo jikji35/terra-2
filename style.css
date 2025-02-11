@@ -102,7 +102,7 @@ table > tbody > tr:nth-of-type(2) {
   display: inline-block;
   align-items: center; /* 내부 요소 수직 중앙 정렬 */
   white-space: nowrap;
-  animation: marquee 3s linear infinite; /* 시간설정 */
+  animation: marquee 10s linear infinite; /* 시간설정 */
   font-size: 18px;
   color: #ffffff;
   padding: 0; /* (중요!) 가로 화면으로 너비가 이탈하는것을 방지하기 위함이다. */
@@ -111,12 +111,17 @@ table > tbody > tr:nth-of-type(2) {
 
 @keyframes marquee {
   from {
-    transform: translateX(-20%); /* 전광판문자 시작 위치 */
-  }
+    transform: translateX(100%); /* 전광판 구역~ 직지초35회 김천지부 동기연락망 화면 오른쪽 바깥에서 시작 */
+}
   to {
-    transform: translateX(-10%); /* 끝 위치 */
+    transform: translateX(-100%); /* 화면 왼쪽 바깥으로 나감 */
   }
 }
+
+
+
+
+
 
 /* 전광판 좌측구역~ 아이콘 4개 큐브가 앞뒤로 회전하는 애니메이션 구현 */
 
@@ -156,7 +161,7 @@ a {
   color: #ffffff;
 }
 
-/* LED 스크린 */
+/* 전광판 LED 스크린 */
 marquee > img {
   box-sizing: border-box;
   padding-top: 10px;
