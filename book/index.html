@@ -1,5 +1,6 @@
 <!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
 부트스트랩 link는 <head>에 삽입하고 script는 body부분의 끝부분에 삽입한다.
+(2번째 페이지임! ~ 동영상,햄버거버튼_황악회칙,공유,오픈채팅,입출금내역서,입금현황)
 -->
 
 
@@ -10,7 +11,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="직지35회">
-        <title>☏ 직지35</title>
+        <title>☏직지35</title>
+
+
+        <!-- 스크립트 위치가 어디에와도 상관없게끔하는 코드 ~ <head>태그 안에 삽입한다. -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            console.log("HTML 로딩 완료 후 실행됨!");
+          });
+        </script>    
         
 
       <link
@@ -122,6 +131,7 @@
         <!-- 자바스크립트(중요!) -->
         <link rel="stylesheet" media="screen and (max-width: 580px)" href="style.css">
 
+        <!-- 부트스트랩 사용(중요!) -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 	
@@ -245,15 +255,15 @@
           <!--  황악회 입출금내역서 (style.css도 포함)-->
           <!--  구글스프레드시트에서 gagebu.xlsx파일과 동기화 시켜서 구글시트 파일에서 수정하면 웹페이지에서도 수정된다. 만약에 파일명이 바뀐다면 구글
           스프레드시트에서 웹게시를 해서 코드를 다시 받아야만 연동시킬수있다.  -->
-          <li><a class="btn btn-primary text-bg-secondary p-2" id="gagebu" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGhqELrLq35IHnMsXOk5QiEB3j9vQc7mJCSycngGTSYzZbQJ4M9RkMupUPUaTzS8ut2HsdC3IjEhhx/pubhtml" role="button">입출금내역서(test)</a></li>
+          <li><a class="btn btn-primary text-bg-secondary p-2" id="gagebu" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGhqELrLq35IHnMsXOk5QiEB3j9vQc7mJCSycngGTSYzZbQJ4M9RkMupUPUaTzS8ut2HsdC3IjEhhx/pubhtml" target="_blank" rel="noopener noreferrer" role="button">입출금내역서(test)</a></li>
           
           
-          
+
           
           <!--  황악회원 입금현황 (style.css도 포함)-->
           <!--  구글스프레드시트에서 gagebu.xlsx파일과 동기화 시켜서 구글시트 파일에서 수정하면 웹페이지에서도 수정된다. 만약에 파일명이 바뀐다면 구글
           스프레드시트에서 웹게시를 해서 코드를 다시 받아야만 연동시킬수있다.  -->
-          <li><a class="btn btn-primary text-bg-secondary p-1" id="gagebu_1"  href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_siRAwNp9PlsyQR2oLPwdvwbXLN5wX2YW0ZL8aBEz0WnhBNlnssZ0E3gztRxopw/pubhtml" role="button">납입금현황(test)</a></li>
+          <li><a class="btn btn-primary text-bg-secondary p-1" id="gagebu_1"  href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_siRAwNp9PlsyQR2oLPwdvwbXLN5wX2YW0ZL8aBEz0WnhBNlnssZ0E3gztRxopw/pubhtml" target="_blank" rel="noopener noreferrer" role="button">납입금현황(test)</a></li>
 
 
 
