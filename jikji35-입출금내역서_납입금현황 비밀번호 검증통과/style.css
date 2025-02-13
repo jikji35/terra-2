@@ -56,7 +56,7 @@ td {
   margin: auto;
   text-align: center;
   color: #f4f4f4;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.521);
   padding: 0.125rem 0px; /*  LED창과 시계와의 상하간격 10px사용  */
 }
 
@@ -111,17 +111,14 @@ table > tbody > tr:nth-of-type(2) {
 
 @keyframes marquee {
   from {
-    transform: translateX(100%); /* 전광판 구역~ 직지초35회 김천지부 동기연락망 화면 오른쪽 바깥에서 시작 */
-}
+    transform: translateX(
+      100%
+    ); /* 전광판 구역~ 직지초35회 김천지부 동기연락망 화면 오른쪽 바깥에서 시작 */
+  }
   to {
     transform: translateX(-100%); /* 화면 왼쪽 바깥으로 나감 */
   }
 }
-
-
-
-
-
 
 /* 전광판 좌측구역~ 아이콘 4개 큐브가 앞뒤로 회전하는 애니메이션 구현 */
 
@@ -179,64 +176,64 @@ marquee > a {
   /* NO 숫자 제목부분 */
   width: 1.56rem; /* 25px */
   height: 1.56rem;
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   padding: 0.625rem 0;
   font-size: 0.6em; /* 12px */
-  color: #1690e4;
+  color: #c49c19d0;
 }
 .name {
   /* 이름 제목부분: 아래 name_1와 맞출것! */
   width: 4.8rem; /* 5.8 */
   height: 1.56rem;
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   font-size: 1.2em; /* 20px */
   /*	font-weight: bold;*/
-  color: #1690e4;
+  color: #c49c19d0;
   letter-spacing: 1px;
 }
 .tel {
   /* 전화번호 제목부분: 아래 tel_와 맞출것! */
   width: 9.2rem; /* 11.25 */
   height: 1.56rem;
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   font-size: 1.2em; /* 20px */
   /*	font-weight: bold;*/
   letter-spacing: 1px;
-  color: #1690e4;
+  color: #c49c19d0;
 }
 .address {
   /* 주소 제목부분 */
   width: 3.75rem; /* 60px */
   height: 1.56rem; /* 25px */
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   padding: 0.375rem 0;
   font-size: 0.9em; /* 12px */
-  color: #1690e4;
+  color: #c49c19d0;
 }
 .remark {
   /* 비고 제목부분 */
   width: 3.75rem; /* 60px */
   height: 1.56rem;
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   padding: 0.375rem 0;
   font-size: 0.9em; /* 15px */
-  color: #1690e4;
+  color: #c49c19d0;
 }
 .sms {
   /* SMS 문자메세지 제목부분 */
   width: 3.75rem; /* 60px */
   height: 1.56rem;
-  border: 1px solid;
+  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
   text-align: center;
   padding: 0.375rem 0;
   font-size: 1.1em; /* 15px */
   /*	font-weight: bold;*/
-  color: #1690e4;
+  color: #c49c19d0;
 }
 
 .no_1 {

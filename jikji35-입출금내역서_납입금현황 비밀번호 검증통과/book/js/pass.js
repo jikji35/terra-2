@@ -4,7 +4,7 @@ function checkPassword() {
   const userInput = prompt('비밀번호를 입력하세요:'); // 사용자 입력 받기
 
   if (userInput === correctPassword) {
-    alert('비밀번호가 맞습니다. 확인버튼을 클릭하세요. ^^');
+    //alert('비밀번호가 맞습니다. 확인버튼을 클릭하세요. ^^');
     window.location.href =
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vTGhqELrLq35IHnMsXOk5QiEB3j9vQc7mJCSycngGTSYzZbQJ4M9RkMupUPUaTzS8ut2HsdC3IjEhhx/pubhtml';
     return true; // ✅ 이동 허용

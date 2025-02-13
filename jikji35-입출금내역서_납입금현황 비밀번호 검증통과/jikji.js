@@ -52,14 +52,14 @@ window.onload = () => {
   setTimeout(() => {
     document.getElementById('loading-screen').style.opacity = '0';
 
-    // CSS transition 효과를 위한 딜레이 (0.5초 후 display: none 적용)
+    // CSS transition 효과를 위한 딜레이 (0.4초 후 display: none 적용)
     setTimeout(() => {
       document.getElementById('loading-screen').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
-    }, 500);
-  }, 1000); // 1초 동안 로딩 화면
+    }, 400);
+  }, 800); // 0.8초 동안 로딩 화면
 
-  // 문자메시지(SMS)를 보내기 위함
+  // 직지황악회 전화번호로 문자메시지(SMS)를 보냄(이모티콘 클릭)
   function sendSMS(event, phoneNumber) {
     event.preventDefault(); // 기본 동작 차단
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
