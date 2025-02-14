@@ -130,8 +130,22 @@ header {
   text-align-last: left;
 }
 
+/* 메뉴판 위치 상하 조정 */
+.custom-margin {
+  margin-top: 230px; /* 원하는 만큼 조정 (예: 230px) */
+}
+
+/* 버튼너비에 사용 */
+.btn-custom-width {
+  width: 100%;
+}
+
 /* Dropdown 펼침메뉴 */
-div.btn-group {
+div.btn-group1 {
+  margin-top: 25rem;
+  margin-left: 1.5rem;
+}
+div.btn-group2 {
   margin-top: 25rem;
   margin-left: 1.5rem;
 }
@@ -184,6 +198,8 @@ ul.dropdown-menu dropdown-menu-dark {
   padding-top: 0;
 }
 
+
+
 /* 동기회칙 보기 메뉴 */
 .nav-link > span {
   color: rgb(188, 192, 249);
@@ -203,7 +219,6 @@ ul.dropdown-menu dropdown-menu-dark {
   color: rgb(202, 247, 233);
   font-size: 1.3em;
 }
-
 
 /* 회원 납입금현황 */
 #gagebu_1 {

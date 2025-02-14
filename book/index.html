@@ -196,81 +196,72 @@
 					</div>
 						
 
-
-
-						
-					<!--  황악회칙보기 Box -->		
-					<div class="d-flex gap-5 justify-content-center bg-opacity-10">
-
-					  <ul class="dropdown-menu dropdown-menu-dark position-static d-grid gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" style="background-color: rgba(0, 0, 0, 0.3);">
-
-
-						<li><a class="dropdown-item rounded-2 active">황악회칙보기</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index1.html" target="_blank" rel="noopener noreferrer">1페이지</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index2.html" target="_blank" rel="noopener noreferrer">2페이지</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index3.html" target="_blank" rel="noopener noreferrer">3페이지</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index4.html" target="_blank" rel="noopener noreferrer">4페이지</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index5.html" target="_blank" rel="noopener noreferrer">5페이지</a></li>
-						<li><a class="dropdown-item rounded-2" href="../book/index6.html" target="_blank" rel="noopener noreferrer">6페이지</a></li>
-
-						</ul>
-					</div>
-						
-						
-
-						
-					
-			
-					
-					<!-- <Dropdown 클릭시 아래로 펼쳐지는 메뉴판  -->
-					<div class="btn-group">
-					    <button type="button" class="btn btn-success" data-bs-toggle="dropdown">Dropdown</button>
-					    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-						<span class="visually-hidden">Toggle Dropdown</span>
-					    </button>
-
-						<ul class="dropdown-menu dropdown-menu-dark">
-							<!-- <li><a class="dropdown-item" href="http://pf.kakao.com/_bnUks/chat">카카오톡</a></li>  -->
-							<!-- <li><a class="dropdown-item" href="https://terabox.com/s/1XQCfP1lUJKfQOXmLzCKgQw">공유</a></li> -->
-							<li><a class="dropdown-item" href="https://drive.google.com/drive/folders/0B7PdKqLOAoVfNE15SjZiSmQyYlk?resourcekey=0-80AfJPH1GIofKRnp0m0weQ&usp=share_link">공유</a></li>
-							
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="intro/Forest-2.mp4" autoplay muted loop target="_blank" rel="noopener noreferrer">Movie</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<!-- <li><a class="dropdown-item" href="https://github.com/jeon2457/jikji35/tree/main/music/download">Music Video</a></li>  -->
-							<li><a class="dropdown-item" href="http://naver.me/GrqSOiaT" target="_blank" rel="noopener noreferrer">Music Video</a></li>
-							
-						</ul>
-					</div><p></p>
-
-
-          <!--  황악회 입출금내역서 (style.css도 포함)-->
-          <!--  구글스프레드시트에서 gagebu.xlsx파일과 동기화 시켜서 구글시트 파일에서 수정하면 웹페이지에서도 수정된다. 만약에 파일명이 바뀐다면 구글
-          스프레드시트에서 웹게시를 해서 코드를 다시 받아야만 연동시킬수있다.  -->
-          <!-- 비밀번호 검증 관문을 통과하면 이곳으로 이동   -->
-          <li>
-            <a class="btn btn-primary text-bg-secondary p-2" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGhqELrLq35IHnMsXOk5QiEB3j9vQc7mJCSycngGTSYzZbQJ4M9RkMupUPUaTzS8ut2HsdC3IjEhhx/pubhtml" onclick="return checkPassword()" target="_blank" rel="noopener noreferrer">
-                입출금내역서(test)
-            </a>
-          </li>
-
-
+<!-- 테이블 추가 -->
+<!-- CSS에서 .custom-margin 메뉴판위치 상하조정 -->
+<div class="container custom-margin">
+  <table class="table table-bordered text-center">
+      <tbody>
+          <!-- 황악회칙보기 Dropdown -->
+          <tr>
+              <td>
+                  <div class="btn-group d-block">
+                    <!-- .btn-custom-width 버튼너비에 사용 -->
+                    <!-- btn-success ~ 녹색계통의 버튼색상 -->
+                    <!-- btn-warning ~ 주황색계통의 버튼색상 -->
+                      <button type="button" class="btn btn-success dropdown-toggle btn-custom-width" data-bs-toggle="dropdown" aria-expanded="false">
+                          황악회칙보기
+                      </button>
+                      <!-- dropdown-menu-dark 황악회칙보기 버튼을 클릭하면 열리면서 나타나는 배경색 dark바탕색에 흰색계통의 글자 -->
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="../book/index1.html" target="_blank">1페이지</a></li>
+                          <li><a class="dropdown-item" href="../book/index2.html" target="_blank">2페이지</a></li>
+                          <li><a class="dropdown-item" href="../book/index3.html" target="_blank">3페이지</a></li>
+                          <li><a class="dropdown-item" href="../book/index4.html" target="_blank">4페이지</a></li>
+                          <li><a class="dropdown-item" href="../book/index5.html" target="_blank">5페이지</a></li>
+                          <li><a class="dropdown-item" href="../book/index6.html" target="_blank">6페이지</a></li>
+                      </ul>
+                  </div>
+              </td>
+          </tr>
           
+          <!-- 기타 Dropdown 메뉴 -->
+          <tr>
+              <td>
+                  <div class="btn-group d-block">
+                    <!-- .btn-custom-width 버튼너비에 사용 -->
+                    <!-- btn-success ~ 녹색계통의 버튼색상 -->
+                      <button type="button" class="btn btn-success dropdown-toggle btn-custom-width" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                      </button>
+                      <!-- dropdown-menu-dark Dropdown버튼을 클릭하면 열리면서 나타나는 배경색 dark바탕색에 흰색계통의 글자 -->
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/0B7PdKqLOAoVfNE15SjZiSmQyYlk" target="_blank">공유</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="intro/Forest-2.mp4" target="_blank">Movie</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="http://naver.me/GrqSOiaT" target="_blank">Music Video</a></li>
+                      </ul>
+                  </div>
+              </td>
+          </tr>
           
-          <!--  황악회원 입금현황 (style.css도 포함)-->
-          <!--  구글스프레드시트에서 gagebu.xlsx파일과 동기화 시켜서 구글시트 파일에서 수정하면 웹페이지에서도 수정된다. 만약에 파일명이 바뀐다면 구글
-          스프레드시트에서 웹게시를 해서 코드를 다시 받아야만 연동시킬수있다.  -->
-          <!-- 비밀번호 검증 관문을 통과하면 이곳으로 이동   -->
-          <li>
-            <a class="btn btn-primary text-bg-secondary p-1" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_siRAwNp9PlsyQR2oLPwdvwbXLN5wX2YW0ZL8aBEz0WnhBNlnssZ0E3gztRxopw/pubhtml" onclick="return checkPassword()" target="_blank" rel="noopener noreferrer">
-              납입금현황(test)
-            </a>
-        </li>
+          <!-- 재정 관련 링크 -->
+          <tr>
+              <td>
+                  <a class="btn btn-secondary d-block" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGhqELrLq35IHnMsXOk5QiEB3j9vQc7mJCSycngGTSYzZbQJ4M9RkMupUPUaTzS8ut2HsdC3IjEhhx/pubhtml" onclick="return checkPassword()" target="_blank">입출금내역서(test)</a>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <a class="btn btn-secondary d-block" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_siRAwNp9PlsyQR2oLPwdvwbXLN5wX2YW0ZL8aBEz0WnhBNlnssZ0E3gztRxopw/pubhtml" onclick="return checkPassword()" target="_blank">납입금현황(test)</a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
+
+						
   				</div>
 			</div>
 		</nav> 
