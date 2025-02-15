@@ -1,6 +1,9 @@
-<!--HTML + CSS + JavaScript 코드  -->
-<!--첫진입 페이지가 로그인 검증코드 이므로 간단하게 이곳 페이지에 코드를 모두 담았다. -->
-<!-- 배경화면은 picture 폴더에 20여개의 이미지가 있다.  -->
+<!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
+부트스트랩 link는 <head>에 삽입하고, <script>는 <body>부분의 끝부분에 삽입해야하나 <script> "DOMContentLoaded" 또는 defer를 <head>안에 삽입하면 그 다음부터 스크립트 태그를 <body> 어느 위치에 있어도 정상적으로 작동한다.한다.
+✅메인 이 페이지는 초기화면,엑셀 스프레드시트 접속연결시 보안검증 절차없이 코딩되어있다.  ✅ [[무검증 코딩 페이지]] 
+-->
+<!-- [이모지 모음] 🥰🥵 💥🖐 ⌚ 📱 📲 💻 📞 ⏰ ⌛ 📌🚩🧡❌ ❗ ❓
+🔔🔕 ✅ ❎ 💯 📢 📣 -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -11,8 +14,16 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="description" content="직지35회" />
-    <!-- <title>☎️ 직지35</title> -->
     <title>&#x260E; 직지35</title>
+
+    <!-- 아이폰에서는 전화번호형식 010-1234-5678과 같은 형식이면 자동링크라 바로 전화가 걸린다. 이를 막기위한 메타태그는 -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- 화면크기 반응형으로 작동시킬수있다.
+      @media ( max-width: 640px ) {
+      body { color: red; }
+      }
+    -->
 
     <!-- 파비콘 아이콘들 -->
     <link
@@ -119,6 +130,8 @@
         return false;
       };
     </script>
+
+    <!-- ✅첫페이지 검증확인 페이지로 <style>과 <script>는 간단히 내부에서 처리했다. -->
     <style>
       /* 페이지 기본 스타일 */
       * {
@@ -188,6 +201,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- 로그인 박스 -->
     <div id="login-box">
@@ -199,9 +213,10 @@
       <button onclick="checkPassword()">로그인</button>
     </div>
 
+    <!-- ✅ <head>부분에서 스크립트 "DOMContentLoaded", function() 대신에 defer을 사용하면 스크립트가 <body>어느 위치에와도 상관없지만 생략했기때문에 여기서는 <body> 제일 하단에 코드를 삽입해야한다.  -->
     <script>
       function checkPassword() {
-        const correctPassword = '7777'; // 설정된 비밀번호
+        const correctPassword = '77777'; // 설정된 비밀번호
         const passwordInput = document.getElementById('password'); // 입력창 가져오기
         const userInput = passwordInput.value.trim(); // 🔥 공백 제거
 

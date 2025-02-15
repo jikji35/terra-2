@@ -1,6 +1,10 @@
 <!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
-부트스트랩 link는 <head>에 삽입하고 script는 body부분의 끝부분에 삽입한다.
+부트스트랩 link는 <head>에 삽입하고, <script>는 <body>부분의 끝부분에 삽입해야하나 <script> "DOMContentLoaded" 또는 defer를 <head>안에 삽입하면 그 다음부터 스크립트 태그를 <body> 어느 위치에 있어도 정상적으로 작동한다.한다.
+✅메인 이 페이지는 초기화면,엑셀 스프레드시트 접속연결시 보안검증 절차없이 코딩되어있다.  ✅ [[무검증 코딩 페이지]] 
 -->
+<!-- [이모지 모음] 🥰🥵 💥🖐 ⌚ 📱 📲 💻 📞 ⏰ ⌛ 📌🚩🧡❌ ❗ ❓
+🔔🔕 ✅ ❎ 💯 📢 📣 -->
+
 
 
 <!doctype html>
@@ -10,14 +14,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="직지35회">
-        <title>☏ 직지35</title>
+        <title>&#x260E; 직지35</title>
       
 
 
       <!-- 비밀번호 검증 관문   -->
       <!-- pass.js파일에서 비밀번호 관리!! -->
       <!-- 아래 255라인, 268라인 부근에 "입출금내역서(test)", "납입금현황(test)" 해당 링크가 걸려있다. -->
-      <script src="js/pass.js"></script> <!-- 📌 외부 JavaScript 파일 로드 -->
+      <!-- ✅스크립트 위치가 어디에와도 상관없게끔하는 코드 ~ <head>태그 안에 삽입한다. -->
+      <!-- ✅스크립트 "DOMContentLoaded", function() 대신에 defer을 사용해도 상관없음! -->
+      <script src="js/pass.js" defer></script> <!-- 📌 외부 JavaScript 파일 로드 -->
 
       <link
       rel="apple-touch-icon"
@@ -118,9 +124,14 @@
       <link rel="icon" href="image/favicon.ico?" />
 
 
+      <!-- ✅매니페스트(manifest)는 파비콘의 정보를 모두 담고있다. -->
       <link rel="manifest" href="/manifest.json" />
 
+      <!-- Ms브라우저 설정 파일 -->
+      <link rel="browserconfig" href="/browserconfig.xml" />
+
       <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />  
        
        
@@ -147,13 +158,17 @@
 
 
 
-    <!-- 마우스 우클릭방지/드래그방지하는 스크립트를 body에 같이 삽입한다.  -->
-    <body
-      oncontextmenu="return false"
-      onselectstart="return false"
-      ondragstart="return false"
-      onkeydown="return false"
-    >
+      <!-- 마우스 우클릭 방지/드래그 방지하는 스크립트를 head안에 삽입! -->
+        <!-- ✅이 코드 하나로 해당 페이지를 작동시킬수있다. -->
+        <script type="text/javascript">
+          document.oncontextmenu = function () {
+            return false;
+          };
+        </script>
+      </head>
+
+
+      <body>
 
 
 
@@ -187,17 +202,19 @@
 							
 						
 					<!-- 스피너 원형으로 회전시키기! ==> 직지35황악회 문자도 같이 회전한다.  -->
+                    <!-- ✅CSS에서 #offcanvasDarkNavbarLabel에서 "직지35 황악회" 글자색상 바꾸기   -->
 					<br><br>
 					<div class="d-flex justify-content-center jikji35">
 						<div class="spinner-border spinner-border-sm text-success" role="status">
 							<span class="visually-hidden">Loading...</span>
-							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">직지35 황악회</h5>
+                    <!-- ✅글자색상, 35숫자 사이즈 구현 -->
+							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">직지<span class="number_35">35</span> 황악회</h5>
 						</div>
 					</div>
-						
 
 <!-- 테이블 추가 -->
 <!-- CSS에서 .custom-margin 메뉴판위치 상하조정 -->
+<!-- ✅ 테이블 테두리를 점선 또는 숨기기를 하려면 CSS style.css의 table-bordered 클래스에서 수정한다. -->
 <div class="container custom-margin">
   <table class="table table-bordered text-center">
       <tbody>

@@ -1,4 +1,4 @@
-/* ✅반응형 웹페이지를 만드는것이기 때문에 여기 CSS에서는 아래 구간에
+/* 반응형 웹페이지를 만드는것이기 때문에 여기 CSS에서는 아래 구간에
    @media (max-width:580px) { } 를 만들었으니 채워넣어야한다.
 */
 
@@ -76,31 +76,6 @@ div.spinner-border.spinner-border-sm {
   left: 190px;
   z-index: 1000;
 }
-
-
-
-/* ✅테이블 보더 테두리 숨기기(선택일)  */
-/* ✅테이블 보더 테두리 숨기기와 아래 점선모두 주석처리하면 디폴트로 index.html 코드로만 실선 테두리가 기본으로 보여준다.  */
-/* .table-bordered {
-  border: none !important;
-}
-
-.table-bordered td, 
-.table-bordered th {
-  border: none !important;
-} */
-
-
-/* ✅테이블 보더 테두리 점선으로 보이기(선택일)  */
-.table-bordered {
-  border: 2px dashed black !important;
-}
-
-.table-bordered td, 
-.table-bordered th {
-  border: 1px dashed black !important;
-}
-
 
 /* 황악회칙 텍스트  */
 #wrap {
@@ -193,24 +168,11 @@ body > div > nav {
   width: 90%;
 }
 
-/* ✅직지35회 황악회 글자 */
-/* ✅아래 701라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
+/* 직지35회 황악회 글자 */
 #offcanvasDarkNavbarLabel {
-  color: rgba(223, 114, 64, 0.897);
-  /* color: rgba(94, 240, 167, 0.815);  */
-  /* color: rgba(204, 121, 154, 0.815); */
-  /* color: rgba(248, 190, 30, 0.973); */
+  color: rgb(244, 115, 55);
   font-size: 1.4em;
   margin-left: 1.8rem;
-}
-
-  /* ✅ 숫자 35 */
-  /* ✅아래 712라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
-.number_35 {
- /* color: rgb(122, 141, 248); */
- color: rgb(255, 255, 255);
-  font-size: 20px;
-/*  margin-left: 1.8rem;*/
 }
 
 /* 황악회칙보기 Box */
@@ -705,26 +667,6 @@ body > div > div.hero {
     margin-left: 1.5rem;
   }
 
-  
-  /* ✅직지35회 황악회 글자 */
-  #offcanvasDarkNavbarLabel {
-    color: rgba(223, 114, 64, 0.897);
-    /* color: rgba(94, 240, 167, 0.815);  */
-    /* color: rgba(204, 121, 154, 0.815); */
-    /* color: rgba(248, 190, 30, 0.973); */
-    font-size: 1.3em;
-    margin-left: 1.5rem;
-  }
-  
-  
-  /* ✅ 숫자 35 */
-  .number_35 {
- /* color: rgb(122, 141, 248); */
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  /*  margin-left: 1.8rem;*/
-  }
-  
   /* Home 글자 */
   a.btn.btn-primary {
     margin-left: 1.8rem;

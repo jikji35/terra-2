@@ -1,8 +1,8 @@
 // pass.js - 비밀번호 검증 스크립트
-
+// ✅ 이 페이지는 첫화면에서 비밀번호 검증을 거치므로 여기서는 필요가 없다.
 
 //function checkPassword() {
-//  const correctPassword = '7777'; // ✅ 설정한 비밀번호
+//  const correctPassword = '77777'; // ✅ 설정한 비밀번호
 //  const userInput = prompt('비밀번호를 입력하세요:'); // 사용자 입력 받기
 //
 //  if (userInput === correctPassword) {

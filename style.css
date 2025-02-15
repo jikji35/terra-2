@@ -8,7 +8,7 @@ body {
   padding: 3px 0px 3px 0px; /* 상단화면과 시계사이 간격 */
 }
 
-/* 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) */
+/*  ✅ 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) */
 /* 이 코드를 사용하기위해 index.html,style.css와 jikji.js파일과 연결되어있다. */
 /* 전체 화면을 덮는 로딩 화면 스타일 */
 #loading-screen {
@@ -180,7 +180,8 @@ marquee > a {
   text-align: center;
   padding: 0.625rem 0;
   font-size: 0.6em; /* 12px */
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
 }
 .name {
   /* 이름 제목부분: 아래 name_1와 맞출것! */
@@ -190,7 +191,8 @@ marquee > a {
   text-align: center;
   font-size: 1.2em; /* 20px */
   /*	font-weight: bold;*/
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
   letter-spacing: 1px;
 }
 .tel {
@@ -202,7 +204,8 @@ marquee > a {
   font-size: 1.2em; /* 20px */
   /*	font-weight: bold;*/
   letter-spacing: 1px;
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
 }
 .address {
   /* 주소 제목부분 */
@@ -212,7 +215,8 @@ marquee > a {
   text-align: center;
   padding: 0.375rem 0;
   font-size: 0.9em; /* 12px */
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
 }
 .remark {
   /* 비고 제목부분 */
@@ -222,7 +226,8 @@ marquee > a {
   text-align: center;
   padding: 0.375rem 0;
   font-size: 0.9em; /* 15px */
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
 }
 .sms {
   /* SMS 문자메세지 제목부분 */
@@ -233,9 +238,13 @@ marquee > a {
   padding: 0.375rem 0;
   font-size: 1.1em; /* 15px */
   /*	font-weight: bold;*/
-  color: #cca72ed0;
+  color: #c49c19d0;
+  /* color: #85b5d1e7; 글자색상 (선택) */
 }
 
+
+
+/* 개인별 구간 */
 .no_1 {
   /* NO 숫자 소제목부분 */
   width: 1.56rem; /* 25px */
