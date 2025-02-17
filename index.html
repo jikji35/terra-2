@@ -167,6 +167,38 @@
         margin-bottom: 15px; /* 입력창과 간격 조정 */
       }
 
+      /* 🥰로고(logo) 흔들림 애니메이션 */
+
+      @keyframes shake {
+        0% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(-5deg);
+        }
+      }
+
+      .shake-animation {
+        animation: shake 0.5s infinite;
+      }
+
+      /* 🥰회전 애니메이션 */
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotate-animation {
+        animation: rotate 3s linear;
+      }
+
       /* 입력 필드 */
       input {
         width: 80%;
@@ -204,8 +236,9 @@
 
   <body>
     <!-- 로그인 박스 -->
+    <!-- id="logo-image"는 로고이미지를 움직이게 할려고 사용 -->
     <div id="login-box">
-      <img src="image/logo.png" alt="로고" class="logo" />
+      <img src="image/logo.png" alt="로고" class="logo" id="logo-image" />
       <!-- ✅ 중앙 정렬된 로고 -->
       <h2>PASSWORD</h2>
       <input type="password" id="password" placeholder="비밀번호 입력" />
@@ -254,6 +287,30 @@
           alert('개발자 도구 접근이 차단되었습니다.');
         }
       });
+
+      function startShakeAnimation() {
+        const logoImage = document.getElementById('logo-image');
+        logoImage.classList.add('shake-animation');
+
+        // 🥰흔들림 애니메이션이 끝난 후 회전 애니메이션 시작
+        setTimeout(() => {
+          logoImage.classList.remove('shake-animation'); // 흔들림 애니메이션 제거
+          startRotateAnimation(); // 회전 애니메이션 시작
+        }, 3000); // 3초 (흔들림 지속 시간)
+      }
+
+      function startRotateAnimation() {
+        const logoImage = document.getElementById('logo-image');
+        logoImage.classList.add('rotate-animation');
+
+        // 🥰회전 애니메이션이 끝난 후 스타일 제거 (선택 사항)
+        setTimeout(() => {
+          logoImage.classList.remove('rotate-animation'); // 회전 애니메이션 제거
+        }, 3000); // 3초 (회전 지속 시간)
+      }
+
+      // 페이지 로드 시 흔들림 애니메이션 시작
+      window.onload = startShakeAnimation;
     </script>
   </body>
 </html>
