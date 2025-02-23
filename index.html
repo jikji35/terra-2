@@ -1,5 +1,6 @@
 <!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
-부트스트랩 link는 <head>에 삽입하고, <script>는 <body>부분의 끝부분에 삽입해야하나 <script> "DOMContentLoaded" 또는 defer를 <head>안에 삽입하면 그 다음부터 스크립트 태그를 <body> 어느 위치에 있어도 정상적으로 작동한다.한다.
+활용방안: 케러셀,오프캔버스,플레이스홀더,스크롤스파이,스피너,토스트,아이콘링크,반응형고정,세로줄,테두리,플렉스,Z-index 등등  
+부트스트랩 link는 <head>에 삽입하고, <script>는 <body>부분의 끝부분에 삽입해야하나 <script> "DOMContentLoaded" 또는 defer를 <head>안에 삽입하면 그 다음부터 스크립트 태그를 <body> 어느 위치에 있어도 정상적으로 작동한다.
 ✅메인 이 페이지는 초기화면,엑셀 스프레드시트 접속연결시 보안검증 절차없이 코딩되어있다.  ✅ [[무검증 코딩 페이지]] 
 -->
 <!-- [이모지 모음] 🥰🥵 💥🖐 ⌚ 📱 📲 💻 📞 ⏰ ⌛ 📌🚩🧡❌ ❗ ❓
@@ -152,7 +153,8 @@
 
       /* 로그인 창 스타일 */
       #login-box {
-        background: rgba(255, 255, 255, 0.8);
+        /* ✅ 투명도: 0.6 으로 백그라운드 희미하게 보이게 함! */
+        background: rgba(255, 255, 255, 0.6);
         padding: 20px;
         border-radius: 10px;
         text-align: center;
@@ -235,6 +237,7 @@
   </head>
 
   <body>
+  <div class="container">  
     <!-- 로그인 박스 -->
     <!-- id="logo-image"는 로고이미지를 움직이게 할려고 사용 -->
     <div id="login-box">
@@ -312,5 +315,6 @@
       // 페이지 로드 시 흔들림 애니메이션 시작
       window.onload = startShakeAnimation;
     </script>
+    </div>
   </body>
 </html>
