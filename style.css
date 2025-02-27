@@ -2,20 +2,16 @@
 
 body {
   background: linear-gradient(to right, #232526, #414345);
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 3px 0px 3px 0px; /* 상단화면과 시계사이 간격 */
+  margin: 0;
+  padding: 3px 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-/*  ✅ 초기화면 광고 로고 띄우고 2초후에 메인 페이지를 열리게 하려고 사용(시작지점) */
-/* 이 코드를 사용하기위해 index.html,style.css와 jikji.js파일과 연결되어있다. */
-/* 전체 화면을 덮는 로딩 화면 스타일 */
 #loading-screen {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #363434; /* 배경색을 회색으로 설정 */
+  background: #363434;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,370 +20,245 @@ body {
 }
 
 #loading-screen img {
-  width: 250px; /* 첫화면 광고 로고 크기 */
+  width: 250px;
 }
 
-/* 메인 컨텐츠(로고전 원래의 홈페이지) 숨기기 */
 #main-content {
   display: none;
 }
-/* 초기화면 광고 로고 띄우고 1초후에 메인 페이지를 열리게 하려고 사용(끝지점 !!) */
-
-table {
-  border-spacing: 0px;
-  border-style: none;
-  padding: 0px;
-  margin: 0 auto;
-  max-width: 100%; /* 추가 */
-  table-layout: fixed; /* 추가: 자동 확장 방지 */
-}
-
-td {
-  border-spacing: 0px;
-  border-style: none;
-  padding: 0px;
-}
-
-/*CSS : 시계를 꾸미는 부분*/
-.header {
-  /*    width: 10.9rem;*/
-  width: 100%;
-  height: 1.25rem;
-  margin: auto;
-  text-align: center;
-  color: #f4f4f4;
-  background-color: rgba(0, 0, 0, 0.521);
-  padding: 0.125rem 0px; /*  LED창과 시계와의 상하간격 10px사용  */
-}
-
-#Clock {
-  color: #f0c420;
-  font-size: 1.25rem;
-}
-#Clockday {
-  color: #f0c420;
-}
-
-/* 전광판 구역 틀고정시키기 */
-table > tbody > tr:nth-of-type(2) {
-  position: sticky;
-  top: 0;
-}
 
 .container {
-  max-width: 1800px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
 }
+
+.header {
+  width: 100%;
+  max-width: 700px;
+  height: 3.25rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: rgba(0, 0, 0);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* 수정: z-index 높여서 최상단 유지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Clockday, #Clock {
+  color: #f0c420;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.header a {
+  color: #f0c420;
+  text-decoration: none;
+}
+
+.main-body {
+  padding-top: 3.25rem; /* 수정: header 높이만큼 여백 추가 */
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0; /* 수정: 상단 여백 제거 */
+}
+
+
+
+
+
 
 .wrap1 {
-  /* 큐브회전이미지부분 */
-  /*    position: fixed;    큐브 고정이미지 */
-  color: aliceblue;
-  width: 1.25rem; /* 아래position설정으로 잠겨서 가로세폭이안먹히는거같음! */
-  height: 1.18rem;
-  margin: center;
-  padding: 1px 0px 0px 1px;
+  width: 25px;
+  height: 25px;
+  padding: 0 0 0 7px;
+  flex-shrink: 0;
+  margin-right: 2px;
 }
-
-/* 전광판 구역~ 직지초35회 김천지부 동기연락망 옆으로 흐르는 애니메이션 구현 */
-
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  align-items: center; /* 수직 중앙 정렬 */
-  background-image: url('image/bg.gif'); /* 전광판 배경이미지 */
-  background-color: lightgray;
-  padding: 0; /* (중요!) 가로 화면으로 너비가 이탈하는것을 방지하기 위함이다. */
-  margin: 0; /* (중요!) 가로 화면으로 너비가 이탈하는것을 방지하기 위함이다. */
-}
-
-.marquee {
-  display: inline-block;
-  align-items: center; /* 내부 요소 수직 중앙 정렬 */
-  white-space: nowrap;
-  animation: marquee 10s linear infinite; /* 시간설정 */
-  font-size: 18px;
-  color: #ffffff;
-  padding: 0; /* (중요!) 가로 화면으로 너비가 이탈하는것을 방지하기 위함이다. */
-  margin: 0; /* (중요!) 가로 화면으로 너비가 이탈하는것을 방지하기 위함이다. */
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(
-      100%
-    ); /* 전광판 구역~ 직지초35회 김천지부 동기연락망 화면 오른쪽 바깥에서 시작 */
-  }
-  to {
-    transform: translateX(-100%); /* 화면 왼쪽 바깥으로 나감 */
-  }
-}
-
-/* 전광판 좌측구역~ 아이콘 4개 큐브가 앞뒤로 회전하는 애니메이션 구현 */
 
 .cube {
-  width: 1.43rem; /* 23px */
-  height: 1.43rem;
-  padding: 1px 0 0 0;
+  width: 25px;
+  height: 25px;
   transform-style: preserve-3d;
-  transform: rotateX(0); /* rotatex()값을 변경하면 튜브가 각도만큼 회전한다.  */
-  transition: all 2s;
+  animation: rotateCube 8s infinite linear;
 }
 
 .cube img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 25px;
+  height: 25px;
 }
 
-.cube img:nth-child(1) {
-  transform: translateZ(11px);
+.cube img:nth-child(1) { transform: translateZ(12.5px); }
+.cube img:nth-child(2) { transform: rotateX(90deg) translateZ(12.5px); }
+.cube img:nth-child(3) { transform: rotateX(180deg) translateZ(12.5px); }
+.cube img:nth-child(4) { transform: rotateX(270deg) translateZ(12.5px); }
+
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(360deg); }
 }
 
-.cube img:nth-child(2) {
-  transform: rotateX(90deg) translateZ(11px);
+.wrap2 {
+  width: 100%;
+  max-width: 700px;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('image/bg.gif');
+  background-color: lightgray;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 
-.cube img:nth-child(3) {
-  transform: rotateX(180deg) translateZ(11px);
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+	padding: 0 50px; /* 수정: 좌우 50px 안쪽에서 시작/사라짐 */
+  box-sizing: border-box; /* 수정: padding이 너비에 포함되도록 */
 }
 
-.cube img:nth-child(4) {
-  transform: rotateX(270deg) translateZ(11px);
+.marquee {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  font-size: 18px;
+  color: #ffffff;
+  padding-left: calc(100% - 50px); /* 수정: 우측 50px 안쪽에서 시작 */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); } /* 우측 50px 안쪽에서 시작 */
+  100% { transform: translateX(calc(-100% - 50px)); } /* 좌측 50px 전에 사라짐 */
+}
+
+
+
+
+
+
+
+table {
+  border-spacing: 0;
+  border-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 0; /* 수정: wrap2 바로 아래 붙임 */
+}
+
+th, td {
+  border: 1px solid #eedca6;
+  text-align: center;
+  padding: 0.625rem 0;
+}
+
+th {
+  font-size: 0.9em;
+  color: #c49c19d0;
+}
+
+.no { width: 1.56rem; }
+.name { width: 4.8rem; font-size: 1.2em; }
+.tel { width: 9.2rem; font-size: 1.2em; }
+.address { width: 3.75rem; }
+.remark { width: 3.75rem; }
+.sms { width: 3.75rem; font-size: 1.1em; }
+
+.no_1 { font-size: 0.8em; color: #ffffff; }
+.name_1 { font-size: 1.1em; color: #ffffff; }
+.tel_1 { font-size: 21px; color: #ffffff; }
+.address_1 { font-size: 0.8em; color: #ffffff; padding: 6px 0; }
+.remark_1 { font-size: 0.8em; color: #ffffff; padding: 6px 0; }
+.sms_1 { padding: 0.37rem 0; }
+
+.max-small {
+  width: 1.31rem;
+  height: 1.31rem;
 }
 
 a {
-  text-decoration-line: none; /* 링크 밑줄쳐진것들 제거  */
+  text-decoration: none;
   color: #ffffff;
 }
 
-/* 전광판 LED 스크린 */
-marquee > img {
-  box-sizing: border-box;
-  padding-top: 10px;
-}
-marquee > span {
-  /* 직지초35 */
-  font-size: 19px;
-}
-marquee > a {
-  /* 김천지부 동기연락망 */
-  font-size: 19px;
-}
-
-.no {
-  /* NO 숫자 제목부분 */
-  width: 1.56rem; /* 25px */
-  height: 1.56rem;
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  padding: 0.625rem 0;
-  font-size: 0.6em; /* 12px */
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-}
-.name {
-  /* 이름 제목부분: 아래 name_1와 맞출것! */
-  width: 4.8rem; /* 5.8 */
-  height: 1.56rem;
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  font-size: 1.2em; /* 20px */
-  /*	font-weight: bold;*/
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-  letter-spacing: 1px;
-}
-.tel {
-  /* 전화번호 제목부분: 아래 tel_와 맞출것! */
-  width: 9.2rem; /* 11.25 */
-  height: 1.56rem;
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  font-size: 1.2em; /* 20px */
-  /*	font-weight: bold;*/
-  letter-spacing: 1px;
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-}
-.address {
-  /* 주소 제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  padding: 0.375rem 0;
-  font-size: 0.9em; /* 12px */
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-}
-.remark {
-  /* 비고 제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem;
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  padding: 0.375rem 0;
-  font-size: 0.9em; /* 15px */
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-}
-.sms {
-  /* SMS 문자메세지 제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem;
-  border: 1px solid #eedca6; /* 개별 셀 테두리 라인색 지정 */
-  text-align: center;
-  padding: 0.375rem 0;
-  font-size: 1.1em; /* 15px */
-  /*	font-weight: bold;*/
-  color: #c49c19d0;
-  /* color: #85b5d1e7; 글자색상 (선택) */
-}
-
-/* 개인별 구간 */
-.no_1 {
-  /* NO 숫자 소제목부분 */
-  width: 1.56rem; /* 25px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  padding: 0.625rem 0; /* 10px */
-  font-size: 0.8em; /* 12px */
-  color: #ffffff;
-}
-
-.name_1 {
-  /* 이름 소제목부분: 위 name와 맞출것! */
-  width: 4.8rem; /* 90px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  font-size: 1.1em; /* 20px */
-  color: #ffffff;
-}
-.tel_1 {
-  /* 전화번호 소제목부분: 위 tel과 맞출것! */
-  width: 9.2rem; /* 180px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  font-size: 21px; /* (중요!) 아래 374라인 반응형으로 동작 */
-  color: #ffffff;
-}
-.address_1 {
-  /* 주소 소제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 0.8em; /* 12px */
-  color: #ffffff;
-}
-.remark_1 {
-  /* 비고 소제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 0.8em; /* 15px */
-  color: #ffffff;
-}
-.sms_1 {
-  /* SMS메세지 소제목부분 */
-  width: 3.75rem; /* 60px */
-  height: 1.56rem; /* 25px */
-  border: 1px solid;
-  text-align: center;
-  padding: 0.37rem 0;
-  font-size: 1em; /* 15px */
-  color: #ffffff;
-}
-.max-small {
-  /* sms문자메세지 이미지부 */
-
-  width: 1.31rem; /* 21px */
-  height: 1.31rem; /* 21px */
-  margin: center;
-  text-align: center;
+tfoot td {
+  border: none;
 }
 
 .foot {
-  display: block;
   color: antiquewhite;
   font-size: 0.8em;
-  height: 1.87rem; /* 30px */
-  margin-top: 1.87rem; /* 30px */
   text-align: center;
+  padding: 0;
 }
-.gototop {
-  /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
 
+.gototop {
   position: fixed;
-  right: 3.5rem; /* 기존 left → right로 변경 */
-  bottom: 1.56rem; /* 25px; */
+  right: 1.5rem;
+  bottom: 0.5rem;
 }
 
 .gototop .fa {
-  /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
   background-color: #fff;
   border: 1px solid lightgray;
-  width: 1.1em; /* 20px */
-  height: 1.1em; /* 20px */
+  width: 1.1em;
+  height: 1.1em;
   border-radius: 50%;
-  line-height: 2.5rem; /* 40px; */
-  font-size: 1.5rem; /* 24px; */
   cursor: pointer;
   transition: 0.3s;
 }
+
 .gototop .fa:hover {
-  /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다.*/
   background-color: #838180;
   color: #ffffff;
 }
 
-/* ======================================================================= */
-/* ======================================================================= */
-
-/* 스크린화면이 400픽셀이하일때는 전화연락망 메뉴중에서 비고란은 없앤다.  */
-@media screen and (max-width: 400px) {
-  .remark {
-    /* 비고 소제목부분 */
-    display: none;
+@media (max-width: 700px) {
+  .container, .header, .wrap2, table {
+    max-width: 100%;
   }
 
-  .remark_1 {
-    /* 비고 소제목부분(개인별) */
-    display: none;
+  .content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .tel_1 {
-    /* 전화번호 소제목부분: 위 tel과 맞출것! */
-    width: 9.2rem;
-    height: 1.56rem;
-    border: 1px solid;
-    text-align: center;
-    font-size: 18px; /* 사이즈 em작동이 안되서 px로 수정함 */
-    letter-spacing: -2px;
-    color: #ffffff;
-  }
+ .wrap1 {
+		width: 25px;
+		height: 25px;
+		padding: 0 0 0 4px;
+		flex-shrink: 0;
+		margin-right: 2px;
 }
 
-/* 테블릿 스타일에 자동 반응한다.  */
-@media (min-width: 401px) and (max-width: 700px) {
-  .tel_1 {
-    /* 전화번호 소제목부분: 위 tel과 맞출것! */
-    width: 9.2rem;
-    height: 1.56rem;
-    border: 1px solid;
-    text-align: center;
-    font-size: 19px; /* 사이즈 em작동이 안되서 px로 수정함 */
-    letter-spacing: -2px;
-    color: #ffffff;
-  }
+  .tel_1 { font-size: 19px; letter-spacing: -2px; }
+}
+
+@media (max-width: 400px) {
+  .remark, .remark_1 { display: none; }
+  .tel_1 { font-size: 18px; }
+	.wrap1 {
+		width: 25px;
+		height: 25px;
+		padding: 0 0 0 2px;
+		flex-shrink: 0;
+		margin-right: 1px;
+}
 }
