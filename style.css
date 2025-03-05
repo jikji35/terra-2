@@ -115,7 +115,6 @@ body {
   100% { transform: rotateX(360deg); }
 }
 
-
 /* 전광판  */
 .wrap2 {
   width: 100%;
@@ -124,23 +123,29 @@ body {
   overflow: hidden;
   background-image: url('image/bg.gif'); /* bg.gif 유지 */
   background-color: lightgray;
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 0;
-  padding: 0 50px 0 75px;  /* 전광판 글자 좌우 안쪽 픽셀에서 보이게 함 */
+  background-position: center; /* 배경 이미지를 중앙에 위치 */
+  background-repeat: repeat-x; /* 가로로 반복 */
+  height: 30px; /* 전광판 높이 유지 */
+  display: flex; /* flex 사용으로 내부 요소 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 0 50px 0 75px; /* 전광판 글자 좌우 안쪽 픽셀에서 보이게 함 */
 }
+
 /* 전광판  */
 .marquee-container {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  padding: 0 50px; /* 좌우 50px 패딩 유지 */
   box-sizing: border-box;
+  display: flex; /* flex로 내부 요소 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
 }
-/* 전광판  */
+
+/* 전광판_글자속도  */
 .marquee {
-  display: inline-block;
-  animation: marquee 10s linear infinite;
+  display: flex; /* inline-block 대신 flex로 변경 */
+  align-items: center; /* 텍스트와 이미지를 세로 중앙 정렬 */
+  animation: marquee 15s linear infinite; /* 흐르는 글자 속도  */
   font-size: 18px;
   color: #ffffff;
   padding-left: 100%; /* 시작점: 우측 끝 */
@@ -152,6 +157,15 @@ body {
   10% { transform: translateX(-50px); } /* 50px 안쪽에서 나타남 */
   90% { transform: translateX(calc(-100% + 50px)); } /* 좌측 50px 전에 사라짐 시작 */
   100% { transform: translateX(-100%); } /* 좌측 끝에서 완전히 사라짐 */
+}
+
+.custom-span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px; /* .wrap2 높이와 동일하게 설정 */
+  margin: 1px 20px 5px 17px; /* 불필요한 여백 제거 */
+  padding: 0; /* 패딩 제거 */
+  vertical-align: middle; /* 세로 중앙 정렬 보장 */
 }
 
 /* 황악회 연락망  */
@@ -236,8 +250,10 @@ tfoot td {
 
 
 
+
+
 /* 반응형 테블릿 사이트  */
-@media (max-width: 700px) {
+@media (max-width: 670px) {
   .container, .header, .wrap2, table {
     max-width: 100%;
   }
@@ -248,7 +264,7 @@ tfoot td {
     left: -28px;
   }
   .wrap1 {
-    padding: 0 0 0 34px;
+    padding: 0 0 0 31px;
   }
   
   .marquee {
@@ -259,12 +275,18 @@ tfoot td {
     padding: 0 30px 0 55px;  /* 전광판 글자 좌우 안쪽 픽셀에서 보이게 함 */
   }
   
-  
+  .custom-span {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 30px; /* 컨테이너 높이와 일치 */
+    margin: 1px 20px 5px 17px; /* 불필요한 여백 제거 */
+    padding: 0; /* 패딩 제거 */
+  }
   
   th {
-  font-size: 0.9em;
-  color: #c49c19d0;
-}
+    font-size: 0.9em;
+    color: #c49c19d0;
+  }
 
   .no { font-size: 0.9em; }
   .name { font-size: 1.0em; }
@@ -283,42 +305,106 @@ tfoot td {
 
 
 
-/* 반응형 모바일 사이즈(중요!)  */
-@media (max-width: 400px) {
-  .remark, .remark_1 { display: none; }
-  .cube-container {
-    left: -26px;
+
+
+/*  반응형 모바일 사이즈 480px가 최적(중요!)  */
+@media (max-width: 480px) {
+  body {
+    padding: 0; /* body의 기본 패딩 제거 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
   }
-  .wrap1 {
-    padding: 0 0 0 27px;
+  
+  .container, .header, .wrap2, table {
+    max-width: 100%; /* 최대 너비를 뷰포트에 맞춤 */
+    width: 100vw; /* 뷰포트 너비에 정확히 맞춤 */
+    margin: 0; /* 좌우 여백 제거 */
+    padding: 0 5px; /* 최소 좌우 패딩 */
+    box-sizing: border-box; /* 패딩 포함 계산 */
+  }
+  
+  .header {
+    max-width: 100%; /* 고정 너비 제거 */
+    width: 100vw; /* 뷰포트 너비에 맞춤 */
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  
+  #Clockday, #Clock {
+  color: #f0c420;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0 5px;
+}
+  
+  .main-body {
+    padding-top: 3rem; /* 헤더와 겹치지 않도록 조정 */
+  }
+  
+  .content-wrapper {
+    width: 100%;
+  }
+  
+  .wrap2 {
+    padding: 0 25px 0 52px; /* 작은 화면에서 패딩 축소 */
   }
   
   .marquee {
     font-size: 0.9em;
   }
   
-  .wrap2 {
-    padding: 0 25px 0 48px;  /* 전광판 글자 좌우 안쪽 픽셀에서 보이게 함 */
+  .custom-span {
+    font-size: 14px;
+    margin: 0 10px; /* 좌우 여백 축소 */
+    line-height: 30px;
+  }
+  
+  table {
+    table-layout: auto; /* 고정 레이아웃 대신 자동 조정 */
+  }
+  
+  .remark, .remark_1 { 
+    display: none; /* 비고 열 숨김 유지 */
+  }
+  
+  .cube-container {
+    left: -20px; /* 작은 화면에서 위치 조정 */
+  }
+  
+  .wrap1 {
+    padding: 0 0 0 31px;
+  }
+  
+  th, td {
+    padding: 0.4rem 0; /* 패딩 축소 */
   }
   
   th {
-  font-size: 0.8em;
-  color: #c49c19d0;
+    font-size: 0.7em;
+    color: #c49c19d0;
   }
 
-  .no { font-size: 0.6em; }
-  .name { font-size: 0.8em; }
-  .tel { font-size: 0.8em; }
-  .address { font-size: 0.7em; }
-  .remark { font-size: 0.7em; }
-  .sms { font-size: 0.8em; }
+  .no { width: 10%; font-size: 0.6em; } /* 상대적 너비로 조정 */
+  .name { width: 20%; font-size: 0.8em; }
+  .tel { width: 40%; font-size: 0.8em; }
+  .address { width: 20%; font-size: 0.7em; }
+  .remark { width: 0; font-size: 0; } /* 숨김 */
+  .sms { width: 10%; font-size: 0.8em; }
 
   .no_1 { font-size: 0.6em; }
   .name_1 { font-size: 0.8em; }
   .tel_1 { font-size: 0.8em; }
   .address_1 { font-size: 0.7em; }
-  .remark_1 { font-size: 0.7em; }
-  .sms_1 { font-size: 0.4em; }
+  .remark_1 { font-size: 0; } /* 숨김 */
+  .sms_1 { font-size: 0.8em; padding: 0.2rem 0; }
   
+  .max-small {
+    width: 1rem; /* 작은 화면에서 이미지 크기 조정 */
+    height: 1rem;
+  }
+  
+  .gototop {
+    right: 2rem; /* 우측 공백 방지 */
+    bottom: 0.3rem;
+  }
 }
-
