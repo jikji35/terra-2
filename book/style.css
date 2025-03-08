@@ -1,4 +1,4 @@
-/* ✅반응형 웹페이지를 만드는것이기 때문에 여기 CSS에서는 아래 구간에
+/* ✅ 반응형 웹페이지를 만드는것이기 때문에 여기 CSS에서는 아래 구간에
    @media (max-width:580px) { } 를 만들었으니 채워넣어야한다.
 */
 
@@ -102,6 +102,7 @@ div.spinner-border.spinner-border-sm {
 }
 
 
+
 /* 황악회칙 텍스트  */
 #wrap {
   position: relative;
@@ -193,8 +194,7 @@ body > div > nav {
   width: 90%;
 }
 
-/* ✅직지35회 황악회 글자 */
-/* ✅아래 701라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
+/* ✅직지35회 황악회 글자 *//* ✅아래 706라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
 #offcanvasDarkNavbarLabel {
   color: rgba(223, 114, 64, 0.897);
   /* color: rgba(94, 240, 167, 0.815);  */
@@ -205,13 +205,14 @@ body > div > nav {
 }
 
   /* ✅ 숫자 35 */
-  /* ✅아래 712라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
+/* ✅아래 718라인 근처에 같은 코드가 있다. (현재 아래코드가 적용됨!!) */
 .number_35 {
  /* color: rgb(122, 141, 248); */
  color: rgb(255, 255, 255);
   font-size: 20px;
 /*  margin-left: 1.8rem;*/
 }
+
 
 /* 황악회칙보기 Box */
 .d-flex.gap-5.justify-content-center {
@@ -549,15 +550,25 @@ body > div > div.hero {
   }
 
   /* 동영상 화면 */
-  .hero video {
+  /* .hero video {
     position: absolute;
     width: 100%;
-    /*min-width: 100%;*/
     min-height: 30vh;
-    z-index: -1; /*heading 텍스트문자가 동영상위로 나타나게 한다.  */
+    z-index: -1;
     display: block;
+  } */
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비율 유지하며 화면 채우기 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*heading 텍스트문자가 동영상위로 나타나게 한다.  */
   }
 
+ 
   /* 동영상 화면 공간 */
   .hero .heading {
     width: 100%;
@@ -698,13 +709,9 @@ body > div > div.hero {
     width: 90%;
   }
 
-  /* 직지35회 황악회 글자 */
-  #offcanvasDarkNavbarLabel {
-    color: rgb(244, 115, 55);
-    font-size: 1.3em;
-    margin-left: 1.5rem;
-  }
-
+  
+  
+  
   
   /* ✅직지35회 황악회 글자 */
   #offcanvasDarkNavbarLabel {
@@ -716,15 +723,17 @@ body > div > div.hero {
     margin-left: 1.5rem;
   }
   
+
   
   /* ✅ 숫자 35 */
-  .number_35 {
+.number_35 {
  /* color: rgb(122, 141, 248); */
   color: rgb(255, 255, 255);
   font-size: 16px;
-  /*  margin-left: 1.8rem;*/
-  }
-  
+/*  margin-left: 1.8rem;*/
+}
+
+
   /* Home 글자 */
   a.btn.btn-primary {
     margin-left: 1.8rem;
