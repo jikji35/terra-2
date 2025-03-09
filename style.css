@@ -269,6 +269,8 @@ tfoot td {
   }
   
   .wrap1 {
+    width: 21px;
+    height: 21px;
     padding: 0 0 0 31px;
   }
   
@@ -312,35 +314,37 @@ tfoot td {
 
 
 
-/*  반응형 모바일 사이즈 480px가 최적(중요!)  */
-@media (max-width: 480px) {
-  body {
-    padding: 0; /* body의 기본 패딩 제거 */
-    overflow-x: hidden; /* 가로 스크롤 방지 */
-  }
+
+
+  /* 반응형 모바일 사이즈 480px가 최적(중요!) */
+  @media (max-width: 480px) {
+    body {
+      padding: 0;
+      overflow-x: hidden;
+    }
   
   .container, .header, .wrap2, table {
-    max-width: 100%; /* 최대 너비를 뷰포트에 맞춤 */
-    width: 100vw; /* 뷰포트 너비에 정확히 맞춤 */
-    margin: 0; /* 좌우 여백 제거 */
-    padding: 0 5px; /* 최소 좌우 패딩 */
-    box-sizing: border-box; /* 패딩 포함 계산 */
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0; /* 좌우 여백 제거, 상하 패딩도 필요 없으면 0 */
+    box-sizing: border-box;
   }
   
   .header {
-    max-width: 100%; /* 고정 너비 제거 */
-    width: 100vw; /* 뷰포트 너비에 맞춤 */
+    max-width: 100%;
+    width: 100vw;
     left: 0;
     right: 0;
     margin: 0;
   }
   
   #Clockday, #Clock {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
   }
   
   .main-body {
-    padding-top: 3rem; /* 헤더와 겹치지 않도록 조정 */
+    padding-top: 3rem;
   }
   
   .content-wrapper {
@@ -357,38 +361,46 @@ tfoot td {
   
   .custom-span {
     font-size: 14px;
-    margin: 0 10px; /* 좌우 여백 축소 */
+    margin: 0 10px;
     line-height: 30px;
   }
   
   table {
-    table-layout: auto; /* 고정 레이아웃 대신 자동 조정 */
+    table-layout: fixed;
   }
   
   .remark, .remark_1 { 
-    display: none; /* 비고 열 숨김 유지 */
+    display: none;
   }
   
   .cube-container {
-    left: -20px; /* 작은 화면에서 위치 조정 */
+    left: -20px;
   }
   
   .wrap1 {
-    padding: 0 0 0 25px;
+    width: 15px; /* 큐브 사이즈 */
+    height: 15px; /* 큐브 사이즈 */
+    padding: 0 0 0 21px;  /* 좌측에서 약간 띄움 */
   }
   
-  .cube {/* 3D 큐브아이콘 사이즈  */
-  width: 22px;
-  height: 22px;
-  }
-
-  .cube img { /* 3D 큐브아이콘 이미지 사이즈 */
+  .cube {
     width: 22px;
     height: 22px;
   }
+
+  .cube img {
+    width: 24px;
+    height: 24px;
+  }
   
+  /* 행 높이 조정 - 이전 수정 유지 */
   th, td {
-    padding: 0.4rem 0; /* 패딩 축소 */
+    padding: 0.6rem 0;
+    vertical-align: middle;
+  }
+  
+  td {
+    min-height: 2.5rem;
   }
   
   th {
@@ -396,30 +408,30 @@ tfoot td {
     color: #c49c19d0;
   }
 
-  .no { width: 6%; font-size: 0.6em; } /* 상대적 너비로 조정 */
+  .no { width: 6%; font-size: 0.6em; }
   .name { width: 26%; font-size: 0.8em; }
   .tel { width: 39%; font-size: 0.8em; }
   .address { width: 17%; font-size: 0.7em; }
-  .remark { width: 0; font-size: 0; } /* 비고란 숨김 */
+  .remark { width: 0; font-size: 0; }
   .sms { width: 12%; font-size: 0.8em; }
 
   .no_1 { font-size: 0.6em; }
   .name_1 { font-size: 0.8em; }
   .tel_1 { font-size: 0.8em; }
   .address_1 { font-size: 0.7em; }
-  .remark_1 { font-size: 0; } /* 비고란 숨김 */
-  .sms_1 { font-size: 0.8em; padding: 0.2rem 0; }
+  .remark_1 { font-size: 0; }
+  .sms_1 { font-size: 0.8em; padding: 0.6rem 0; }
   
   .max-small {
-    width: 1rem; /* 작은 화면에서 이미지 크기 조정 */
+    width: 1rem;
     height: 1rem;
   }
   
   .foot {
     padding: 7px;
-}
+  }
   .gototop {
-    right: 2rem; /* 우측 공백 방지 */
-    bottom: 0.3rem;
+    right: 1.45rem;
+    bottom: 0.8rem;
   }
 }

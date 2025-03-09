@@ -365,6 +365,13 @@ body > div > div.hero {
   color: crimson;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100vh; /* 필요에 따라 조정 */
+  object-fit: cover; /* 비율 유지하며 채우기 */
+}
+
 /* @media 는 반응형으로 변할수있게 설정하는 부분이다. 768px너비이상이 되면
 아래형식으로 변화시키라는 의미이다.  이하일때 변화는 max-width사용 */
 @media screen and (min-width: 768px) {
